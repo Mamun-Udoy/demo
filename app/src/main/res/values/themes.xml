@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NavifationView" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.NavifationView" parent="Base.Theme.NavifationView" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!--<item name="windowSplashScreenBackground">@drawable/splash_back</item>-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/bkash_</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- Required for animated icons -->
+        <item name="windowSplashScreenAnimationDuration">20</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.NavifationView</item>
+    </style>
+
+</resources>

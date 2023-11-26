@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_host"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="com.example.navifationview.DisplayFragment"
+        android:label="fragment_display"
+        tools:layout="@layout/fragment_display" >
+        <action
+            android:id="@+id/action_displayFragment_to_fragmentEditInformation2"
+            app:destination="@id/fragmentEditInformation" />
+        <action
+            android:id="@+id/action_displayFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEditInformation"
+        android:name="com.example.navifationview.recyclerview.FragmentEditInformation"
+        android:label="fragment_edit_information"
+        tools:layout="@layout/fragment_edit_information" >
+        <action
+            android:id="@+id/action_fragmentEditInformation_to_displayFragment"
+            app:destination="@id/displayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp2"
+        android:name="com.example.navifationview.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.example.navifationview.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUp2"
+            app:destination="@id/signUp2" />
+        <action
+            android:id="@+id/action_loginFragment_to_userProfile"
+            app:destination="@id/userProfile" />
+        <action
+            android:id="@+id/action_loginFragment_to_displayFragment"
+            app:destination="@id/displayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.example.navifationview.UserProfile"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfile_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/splashScreenActivity"
+        android:name="com.example.navifationview.SplashScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/retrofitFragment"
+        android:name="com.example.navifationview.RetrofitFragment"
+        android:label="fragment_retrofit"
+        tools:layout="@layout/fragment_retrofit" />
+    <fragment
+        android:id="@+id/checkOut"
+        android:name="com.example.navifationview.CheckOutFragment"
+        android:label="CheckOut"
+        tools:layout="@layout/fragment_check_out"/>
+    <fragment
+        android:id="@+id/paginationFragment"
+        android:name="com.example.navifationview.PaginationFragment"
+        android:label="fragment_pagination"
+        tools:layout="@layout/fragment_pagination" />
+</navigation>
