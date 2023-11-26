@@ -274,6 +274,7 @@ import com.google.firebase.database.FirebaseDatabase
         }
         headerbinding.textview2.setOnClickListener {
             showtoast("you clicked text2")
+            //ytrtyyug
         }
     }
 
